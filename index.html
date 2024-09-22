@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Insurance Customer Self-Service Portal</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+     <h1>Insurance Customer Self-Service Portal</h1>
+  </header>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#" id="nav-file-claim">File a Claim</a></li> 
+            <li><a href="#" id="nav-track-claims">Track claims</a></1i>
+            <li><a href="#" id="nav-chatbot"> Chatbot </a></li>
+            <li><a href="#" id="nav-knowledge-base">Search Knowledge Base</a></li>
+                
+        </ul>
+     </nav>
+
+    <main>
+
+        <!-- Claim Submission Form-->
+
+        <section id="claim-form-section" class="section">
+            <h2>Submit a tiew Insurance Claim</h2>
+            <form id="claim-form">
+                <label for="policy-number">Policy Number:</label>
+                <input type="text" id="policy-number" required> <br>
+
+                <label for="incident-date">Incident Date:</label>
+                <input type="date" id="incident-date" required><br>
+
+                <label for="description">Incident Description:</label>
+                <textarea id="description" required></textarea><br>
+
+                <label for="file-upload">Attach Files:</label>
+                <input type="file" id="file-upload" multiple><br>
+
+                <button type="submit">Submit claim</button>
+                <p id="submission-message"></p>
+
+            </form>
+
+        </section>
+
+      <!-- Claims Tracking -->
+        <section id="claims-tracking-section" class="section" style="display: none;">
+         <h2>Track Your Claims</h2>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Claim Number</th>
+                    <th>Status</th>
+                    <th>Date Submitted</th>
+                    </tr>
+                </thead>
+                <tbody id="claims-list"></tbody>
+            </table>
+
+        </section>
+
+            <!-- Chatbot Integration-->
+        <section id="chatbot-section" class="section" style="display: none;">
+          <h2>Chat with Us (AI-Powered Chatbot)</h2>
+          <div id="chatbot-container">
+             <iframe
+                allow="microphone;"
+                width="850"
+                height="500"
+                src="https://console.dialogflow.com/api-client/demo/embedded/d156a955-3d48-4bb2-a621-f4e521398fda">
+             </iframe>
+          </div>
+        </section>
+        <!-- Knowledge Knowledge Base Search -->
+
+        <section id="knowledge-base-section" class="section" style="display: none;">
+          <h2>Search Knowledge Base</h2>
+          <input type="text" id="search-bar" placeholder= "Search FAQs...">
+          <div id="search-results"></div>
+       </sections>
+    </main>
+
+      <script src="script.js"></script>
+
+</body>
+</html>
+
+
+                
